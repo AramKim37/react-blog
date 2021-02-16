@@ -23,7 +23,7 @@ const userSchema = mongoose.Schema({
   },
 
   role: {
-    type: number,
+    type: Number,
     default: 0,
   },
 
@@ -32,10 +32,10 @@ const userSchema = mongoose.Schema({
   },
 
   tokenExp: {
-    type: number,
+    type: Number,
   },
 });
 
 const User = mongoose.model("User", userSchema);
 
-module.export = { User };
+module.exports = { User };
