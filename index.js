@@ -17,6 +17,10 @@ mongoose
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
+app.get("/", (req, res) => {
+  res.json({ "hello~": "hi!!!" });
+});
+
 app.post("/api/users/register", (req, res) => {
   const user = new User(req.body);
   user.save((err, userData) => {
